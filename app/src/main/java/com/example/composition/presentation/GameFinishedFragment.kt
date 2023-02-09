@@ -19,7 +19,6 @@ class GameFinishedFragment : Fragment() {
     private val binding: FragmentGameFinishedBinding
         get() = _binding ?: throw RuntimeException("FragmentGameFinishedBinding == null")
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         parseArgs()
@@ -89,7 +88,6 @@ class GameFinishedFragment : Fragment() {
             ((countRightAnswers / countOfQuestions.toDouble()) * 100).toInt()
         }
     }
-
 
     override fun onDestroy() {
         super.onDestroy()

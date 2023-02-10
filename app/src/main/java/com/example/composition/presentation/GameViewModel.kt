@@ -93,7 +93,7 @@ class GameViewModel(
     }
 
     private fun calculatePercent(): Int {
-        if (countOfQuestions == 0){
+        if (countOfQuestions == 0) {
             return 0
         }
         return ((countOfRightAnswers / countOfQuestions.toDouble()) * 100).toInt()
@@ -123,14 +123,12 @@ class GameViewModel(
             override fun onFinish() {
                 finishGame()
             }
-
         }
         timer?.start()
     }
 
     private fun generateQuestion() {
         _question.value = generateQuestionUseCase(gameSettings.maxSumValue)
-
     }
 
     private fun formatTime(millisUntilFinished: Long): String {
